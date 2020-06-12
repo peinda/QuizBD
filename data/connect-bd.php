@@ -13,6 +13,7 @@
   }
 
   function UserConnect($login, $password){
+    
     $req =ConnectBD();
       $query = "SELECT * FROM utilisateurs WHERE login = :login AND password = :password";
       $statement= $req->prepare($query);
@@ -41,4 +42,5 @@
       }
 
   }
+
       ?>
